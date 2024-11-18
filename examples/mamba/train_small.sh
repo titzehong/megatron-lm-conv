@@ -25,8 +25,8 @@ case "${MODEL_SCALE}" in
         ;;
 esac
 
-DATA_PATH=$1
-TOKENIZER_PATH=$2
+DATA_PATH=("/workspace/megatron-lm-conv/my-gptSP_text_document")
+TOKENIZER_PATH="/workspace/megatron-lm-conv/gptSPtokenizer"
 
 export NCCL_IB_SL=1
 export CUDA_DEVICE_MAX_CONNECTIONS=1
