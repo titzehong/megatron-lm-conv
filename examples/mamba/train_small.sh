@@ -26,7 +26,7 @@ case "${MODEL_SCALE}" in
 esac
 
 DATA_PATH=("/workspace/megatron-lm-conv/my-gptSP_text_document")
-TOKENIZER_PATH="/workspace/megatron-lm-conv/gptSPtokenizer"
+TOKENIZER_PATH="/workspace/megatron-lm-conv/gptSPtokenizer/tokenizer.model"
 
 export NCCL_IB_SL=1
 export CUDA_DEVICE_MAX_CONNECTIONS=1
@@ -102,4 +102,4 @@ options=" \
        --no-create-attention-mask-in-dataloader \
        --tensorboard-dir ${TENSORBOARD_DIR}"
 
-torchrun --nproc_per_node 8 ../../pretrain_mamba.py ${options}
+torchrun --nproc_per_node 1 ../../pretrain_mamba.py ${options}
