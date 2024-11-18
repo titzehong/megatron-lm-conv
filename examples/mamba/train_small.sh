@@ -5,7 +5,7 @@
 MODEL_SCALE="125M" # or "8B"
 
 case "${MODEL_SCALE}" in
-    "200")
+    "125M")
         TENSOR_MODEL_PARALLEL_SIZE=1
         NUM_LAYERS=12
         HIDDEN_SIZE=1024
